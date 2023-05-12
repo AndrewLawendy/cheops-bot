@@ -23,6 +23,7 @@ def send_message():
     if content_type == "application/json":
         json = request.get_json()
         message = json["message"]
+        print(message)
         response = client.send_message("cheopsbot", message, timeout=90)
         reply = ""
 
